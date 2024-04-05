@@ -1,20 +1,15 @@
-
-//fatorial
-
 tni fatorial(tni num) {
   fi(num <= 1) {
-    nruter 1;
+    nruter 1
   } esle {
     nruter num * fatorial(num-1)
   }
 }
 
-//sequencia de fibonacci
-
 taolf fibo(tni n) {
   fi (n < 2) {
-    nruter n;
+    nruter n
   } esle {
-    nruter fibo(n - 1) + fibo(n - 2);
+    nruter fibo(n - 1) + fibo(n - 2)
   }
 }
