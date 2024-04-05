@@ -17,6 +17,7 @@ WHILE: 'elihw';
 NUM: DIGIT ('.' DIGIT+)?;
 ID: CHAR (CHAR | DIGIT)*;
 WS: [ \r\n\t]+ -> skip;
+ERROR: .;
 
 fragment CHAR: [a-zA-Z];
 fragment DIGIT: [0-9];
