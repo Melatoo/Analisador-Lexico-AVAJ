@@ -1,0 +1,38 @@
+token literal names:
+null
+'Hello, World!'
+null
+null
+'='
+'('
+')'
+null
+null
+'tupni'
+null
+'tnirp'
+null
+null
+
+token symbolic names:
+null
+null
+TYPE
+NUM
+ATRIB
+AP
+FP
+OP
+OPR
+IN
+ID
+OUT
+FUNC
+WS
+
+rule names:
+startRule
+
+
+atn:
+[4, 1, 13, 5, 2, 0, 7, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 3, 0, 2, 1, 0, 0, 0, 2, 3, 5, 1, 0, 0, 3, 1, 1, 0, 0, 0, 0]
