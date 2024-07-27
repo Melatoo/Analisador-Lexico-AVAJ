@@ -1,5 +1,20 @@
 grammar Avaj;
 
+start: (decl | stmt)*;
+decl: (varDecl | funDecl)+;
+varDecl: TYPE ID ATRIB (STRING | NUM) ';';
+funDecl: TYPE ID AP (params)? FP AC (varDecl)* (stmt)* FC;
+params: TYPE ID (',' TYPE ID)*;
+stmt: (expr | ifStmt | whileStmt | returnStmt | outStmt | inStmt) ';';
+ifStmt: COND AP expr FP AC (stmt)* FC (elseStmt)?;
+elseStmt: 'esle' AC (stmt)* FC;
+whileStmt: WHILE AP expr FP AC (stmt)* FC;
+returnStmt: RET expr;
+outStmt: OUT expr;
+inStmt: IN ID;
+expr: ID ATRIB expr | ID AP (args)? FP | expr OP expr | ID OPR ID | ID | NUM | STRING;
+args: expr (',' expr)*;
+
 TYPE: 'tni' | 'taolf' | 'gnirts' | 'loob';
 STRING: '"' .*? '"';
 ATRIB: '=';
