@@ -1,4 +1,4 @@
-// Generated from /home/thiago/Documentos/UFLA/compiladores/Analisador-Lexico-AVAJ/src/Avaj.g4 by ANTLR 4.13.1
+// Generated from src/Avaj.g4 by ANTLR 4.7.2
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -8,9 +8,9 @@ import java.util.List;
 import java.util.Iterator;
 import java.util.ArrayList;
 
-@SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast", "CheckReturnValue"})
+@SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
 public class AvajParser extends Parser {
-	static { RuntimeMetaData.checkVersion("4.13.1", RuntimeMetaData.VERSION); }
+	static { RuntimeMetaData.checkVersion("4.7.2", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =
@@ -96,8 +96,6 @@ public class AvajParser extends Parser {
 		super(input);
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
-
-	@SuppressWarnings("CheckReturnValue")
 	public static class StartContext extends ParserRuleContext {
 		public List<DeclContext> decl() {
 			return getRuleContexts(DeclContext.class);
@@ -115,6 +113,14 @@ public class AvajParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_start; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof AvajListener ) ((AvajListener)listener).enterStart(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof AvajListener ) ((AvajListener)listener).exitStart(this);
+		}
 	}
 
 	public final StartContext start() throws RecognitionException {
@@ -127,7 +133,7 @@ public class AvajParser extends Parser {
 			setState(32);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & 1040432L) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << TYPE) | (1L << STRING) | (1L << IN) | (1L << OUT) | (1L << RET) | (1L << COND) | (1L << WHILE) | (1L << NUM) | (1L << ID))) != 0)) {
 				{
 				setState(30);
 				_errHandler.sync(this);
@@ -172,7 +178,6 @@ public class AvajParser extends Parser {
 		return _localctx;
 	}
 
-	@SuppressWarnings("CheckReturnValue")
 	public static class DeclContext extends ParserRuleContext {
 		public List<VarDeclContext> varDecl() {
 			return getRuleContexts(VarDeclContext.class);
@@ -190,6 +195,14 @@ public class AvajParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_decl; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof AvajListener ) ((AvajListener)listener).enterDecl(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof AvajListener ) ((AvajListener)listener).exitDecl(this);
+		}
 	}
 
 	public final DeclContext decl() throws RecognitionException {
@@ -244,7 +257,6 @@ public class AvajParser extends Parser {
 		return _localctx;
 	}
 
-	@SuppressWarnings("CheckReturnValue")
 	public static class VarDeclContext extends ParserRuleContext {
 		public TerminalNode TYPE() { return getToken(AvajParser.TYPE, 0); }
 		public TerminalNode ID() { return getToken(AvajParser.ID, 0); }
@@ -255,6 +267,14 @@ public class AvajParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_varDecl; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof AvajListener ) ((AvajListener)listener).enterVarDecl(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof AvajListener ) ((AvajListener)listener).exitVarDecl(this);
+		}
 	}
 
 	public final VarDeclContext varDecl() throws RecognitionException {
@@ -295,7 +315,6 @@ public class AvajParser extends Parser {
 		return _localctx;
 	}
 
-	@SuppressWarnings("CheckReturnValue")
 	public static class FunDeclContext extends ParserRuleContext {
 		public TerminalNode TYPE() { return getToken(AvajParser.TYPE, 0); }
 		public TerminalNode ID() { return getToken(AvajParser.ID, 0); }
@@ -322,6 +341,14 @@ public class AvajParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_funDecl; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof AvajListener ) ((AvajListener)listener).enterFunDecl(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof AvajListener ) ((AvajListener)listener).exitFunDecl(this);
+		}
 	}
 
 	public final FunDeclContext funDecl() throws RecognitionException {
@@ -368,7 +395,7 @@ public class AvajParser extends Parser {
 			setState(64);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & 1040416L) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << STRING) | (1L << IN) | (1L << OUT) | (1L << RET) | (1L << COND) | (1L << WHILE) | (1L << NUM) | (1L << ID))) != 0)) {
 				{
 				{
 				setState(61);
@@ -394,7 +421,6 @@ public class AvajParser extends Parser {
 		return _localctx;
 	}
 
-	@SuppressWarnings("CheckReturnValue")
 	public static class ParamsContext extends ParserRuleContext {
 		public List<TerminalNode> TYPE() { return getTokens(AvajParser.TYPE); }
 		public TerminalNode TYPE(int i) {
@@ -408,6 +434,14 @@ public class AvajParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_params; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof AvajListener ) ((AvajListener)listener).enterParams(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof AvajListener ) ((AvajListener)listener).exitParams(this);
+		}
 	}
 
 	public final ParamsContext params() throws RecognitionException {
@@ -452,7 +486,6 @@ public class AvajParser extends Parser {
 		return _localctx;
 	}
 
-	@SuppressWarnings("CheckReturnValue")
 	public static class StmtContext extends ParserRuleContext {
 		public ExprContext expr() {
 			return getRuleContext(ExprContext.class,0);
@@ -476,6 +509,14 @@ public class AvajParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_stmt; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof AvajListener ) ((AvajListener)listener).enterStmt(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof AvajListener ) ((AvajListener)listener).exitStmt(this);
+		}
 	}
 
 	public final StmtContext stmt() throws RecognitionException {
@@ -543,7 +584,6 @@ public class AvajParser extends Parser {
 		return _localctx;
 	}
 
-	@SuppressWarnings("CheckReturnValue")
 	public static class IfStmtContext extends ParserRuleContext {
 		public TerminalNode COND() { return getToken(AvajParser.COND, 0); }
 		public TerminalNode AP() { return getToken(AvajParser.AP, 0); }
@@ -566,6 +606,14 @@ public class AvajParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_ifStmt; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof AvajListener ) ((AvajListener)listener).enterIfStmt(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof AvajListener ) ((AvajListener)listener).exitIfStmt(this);
+		}
 	}
 
 	public final IfStmtContext ifStmt() throws RecognitionException {
@@ -588,7 +636,7 @@ public class AvajParser extends Parser {
 			setState(97);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & 1040416L) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << STRING) | (1L << IN) | (1L << OUT) | (1L << RET) | (1L << COND) | (1L << WHILE) | (1L << NUM) | (1L << ID))) != 0)) {
 				{
 				{
 				setState(94);
@@ -624,7 +672,6 @@ public class AvajParser extends Parser {
 		return _localctx;
 	}
 
-	@SuppressWarnings("CheckReturnValue")
 	public static class ElseStmtContext extends ParserRuleContext {
 		public TerminalNode AC() { return getToken(AvajParser.AC, 0); }
 		public TerminalNode FC() { return getToken(AvajParser.FC, 0); }
@@ -638,6 +685,14 @@ public class AvajParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_elseStmt; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof AvajListener ) ((AvajListener)listener).enterElseStmt(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof AvajListener ) ((AvajListener)listener).exitElseStmt(this);
+		}
 	}
 
 	public final ElseStmtContext elseStmt() throws RecognitionException {
@@ -654,7 +709,7 @@ public class AvajParser extends Parser {
 			setState(109);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & 1040416L) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << STRING) | (1L << IN) | (1L << OUT) | (1L << RET) | (1L << COND) | (1L << WHILE) | (1L << NUM) | (1L << ID))) != 0)) {
 				{
 				{
 				setState(106);
@@ -680,7 +735,6 @@ public class AvajParser extends Parser {
 		return _localctx;
 	}
 
-	@SuppressWarnings("CheckReturnValue")
 	public static class WhileStmtContext extends ParserRuleContext {
 		public TerminalNode WHILE() { return getToken(AvajParser.WHILE, 0); }
 		public TerminalNode AP() { return getToken(AvajParser.AP, 0); }
@@ -700,6 +754,14 @@ public class AvajParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_whileStmt; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof AvajListener ) ((AvajListener)listener).enterWhileStmt(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof AvajListener ) ((AvajListener)listener).exitWhileStmt(this);
+		}
 	}
 
 	public final WhileStmtContext whileStmt() throws RecognitionException {
@@ -722,7 +784,7 @@ public class AvajParser extends Parser {
 			setState(122);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & 1040416L) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << STRING) | (1L << IN) | (1L << OUT) | (1L << RET) | (1L << COND) | (1L << WHILE) | (1L << NUM) | (1L << ID))) != 0)) {
 				{
 				{
 				setState(119);
@@ -748,7 +810,6 @@ public class AvajParser extends Parser {
 		return _localctx;
 	}
 
-	@SuppressWarnings("CheckReturnValue")
 	public static class ReturnStmtContext extends ParserRuleContext {
 		public TerminalNode RET() { return getToken(AvajParser.RET, 0); }
 		public ExprContext expr() {
@@ -758,6 +819,14 @@ public class AvajParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_returnStmt; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof AvajListener ) ((AvajListener)listener).enterReturnStmt(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof AvajListener ) ((AvajListener)listener).exitReturnStmt(this);
+		}
 	}
 
 	public final ReturnStmtContext returnStmt() throws RecognitionException {
@@ -783,7 +852,6 @@ public class AvajParser extends Parser {
 		return _localctx;
 	}
 
-	@SuppressWarnings("CheckReturnValue")
 	public static class OutStmtContext extends ParserRuleContext {
 		public TerminalNode OUT() { return getToken(AvajParser.OUT, 0); }
 		public ExprContext expr() {
@@ -793,6 +861,14 @@ public class AvajParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_outStmt; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof AvajListener ) ((AvajListener)listener).enterOutStmt(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof AvajListener ) ((AvajListener)listener).exitOutStmt(this);
+		}
 	}
 
 	public final OutStmtContext outStmt() throws RecognitionException {
@@ -818,7 +894,6 @@ public class AvajParser extends Parser {
 		return _localctx;
 	}
 
-	@SuppressWarnings("CheckReturnValue")
 	public static class InStmtContext extends ParserRuleContext {
 		public TerminalNode IN() { return getToken(AvajParser.IN, 0); }
 		public TerminalNode ID() { return getToken(AvajParser.ID, 0); }
@@ -826,6 +901,14 @@ public class AvajParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_inStmt; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof AvajListener ) ((AvajListener)listener).enterInStmt(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof AvajListener ) ((AvajListener)listener).exitInStmt(this);
+		}
 	}
 
 	public final InStmtContext inStmt() throws RecognitionException {
@@ -851,7 +934,6 @@ public class AvajParser extends Parser {
 		return _localctx;
 	}
 
-	@SuppressWarnings("CheckReturnValue")
 	public static class ExprContext extends ParserRuleContext {
 		public List<TerminalNode> ID() { return getTokens(AvajParser.ID); }
 		public TerminalNode ID(int i) {
@@ -877,6 +959,14 @@ public class AvajParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_expr; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof AvajListener ) ((AvajListener)listener).enterExpr(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof AvajListener ) ((AvajListener)listener).exitExpr(this);
+		}
 	}
 
 	public final ExprContext expr() throws RecognitionException {
@@ -917,7 +1007,7 @@ public class AvajParser extends Parser {
 				setState(143);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-				if ((((_la) & ~0x3f) == 0 && ((1L << _la) & 786464L) != 0)) {
+				if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << STRING) | (1L << NUM) | (1L << ID))) != 0)) {
 					{
 					setState(142);
 					args();
@@ -995,7 +1085,6 @@ public class AvajParser extends Parser {
 		return _localctx;
 	}
 
-	@SuppressWarnings("CheckReturnValue")
 	public static class ArgsContext extends ParserRuleContext {
 		public List<ExprContext> expr() {
 			return getRuleContexts(ExprContext.class);
@@ -1007,6 +1096,14 @@ public class AvajParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_args; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof AvajListener ) ((AvajListener)listener).enterArgs(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof AvajListener ) ((AvajListener)listener).exitArgs(this);
+		}
 	}
 
 	public final ArgsContext args() throws RecognitionException {
@@ -1063,106 +1160,56 @@ public class AvajParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\u0004\u0001\u0015\u00ab\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001"+
-		"\u0002\u0002\u0007\u0002\u0002\u0003\u0007\u0003\u0002\u0004\u0007\u0004"+
-		"\u0002\u0005\u0007\u0005\u0002\u0006\u0007\u0006\u0002\u0007\u0007\u0007"+
-		"\u0002\b\u0007\b\u0002\t\u0007\t\u0002\n\u0007\n\u0002\u000b\u0007\u000b"+
-		"\u0002\f\u0007\f\u0002\r\u0007\r\u0001\u0000\u0001\u0000\u0005\u0000\u001f"+
-		"\b\u0000\n\u0000\f\u0000\"\t\u0000\u0001\u0001\u0001\u0001\u0004\u0001"+
-		"&\b\u0001\u000b\u0001\f\u0001\'\u0001\u0002\u0001\u0002\u0001\u0002\u0001"+
-		"\u0002\u0001\u0002\u0001\u0002\u0001\u0003\u0001\u0003\u0001\u0003\u0001"+
-		"\u0003\u0003\u00034\b\u0003\u0001\u0003\u0001\u0003\u0001\u0003\u0005"+
-		"\u00039\b\u0003\n\u0003\f\u0003<\t\u0003\u0001\u0003\u0005\u0003?\b\u0003"+
-		"\n\u0003\f\u0003B\t\u0003\u0001\u0003\u0001\u0003\u0001\u0004\u0001\u0004"+
-		"\u0001\u0004\u0001\u0004\u0001\u0004\u0005\u0004K\b\u0004\n\u0004\f\u0004"+
-		"N\t\u0004\u0001\u0005\u0001\u0005\u0001\u0005\u0001\u0005\u0001\u0005"+
-		"\u0001\u0005\u0003\u0005V\b\u0005\u0001\u0005\u0001\u0005\u0001\u0006"+
-		"\u0001\u0006\u0001\u0006\u0001\u0006\u0001\u0006\u0001\u0006\u0005\u0006"+
-		"`\b\u0006\n\u0006\f\u0006c\t\u0006\u0001\u0006\u0001\u0006\u0003\u0006"+
-		"g\b\u0006\u0001\u0007\u0001\u0007\u0001\u0007\u0005\u0007l\b\u0007\n\u0007"+
-		"\f\u0007o\t\u0007\u0001\u0007\u0001\u0007\u0001\b\u0001\b\u0001\b\u0001"+
-		"\b\u0001\b\u0001\b\u0005\by\b\b\n\b\f\b|\t\b\u0001\b\u0001\b\u0001\t\u0001"+
-		"\t\u0001\t\u0001\n\u0001\n\u0001\n\u0001\u000b\u0001\u000b\u0001\u000b"+
-		"\u0001\f\u0001\f\u0001\f\u0001\f\u0001\f\u0001\f\u0001\f\u0003\f\u0090"+
-		"\b\f\u0001\f\u0001\f\u0001\f\u0001\f\u0001\f\u0001\f\u0001\f\u0003\f\u0099"+
-		"\b\f\u0001\f\u0001\f\u0001\f\u0005\f\u009e\b\f\n\f\f\f\u00a1\t\f\u0001"+
-		"\r\u0001\r\u0001\r\u0005\r\u00a6\b\r\n\r\f\r\u00a9\t\r\u0001\r\u0000\u0001"+
-		"\u0018\u000e\u0000\u0002\u0004\u0006\b\n\f\u000e\u0010\u0012\u0014\u0016"+
-		"\u0018\u001a\u0000\u0001\u0002\u0000\u0005\u0005\u0012\u0012\u00b5\u0000"+
-		" \u0001\u0000\u0000\u0000\u0002%\u0001\u0000\u0000\u0000\u0004)\u0001"+
-		"\u0000\u0000\u0000\u0006/\u0001\u0000\u0000\u0000\bE\u0001\u0000\u0000"+
-		"\u0000\nU\u0001\u0000\u0000\u0000\fY\u0001\u0000\u0000\u0000\u000eh\u0001"+
-		"\u0000\u0000\u0000\u0010r\u0001\u0000\u0000\u0000\u0012\u007f\u0001\u0000"+
-		"\u0000\u0000\u0014\u0082\u0001\u0000\u0000\u0000\u0016\u0085\u0001\u0000"+
-		"\u0000\u0000\u0018\u0098\u0001\u0000\u0000\u0000\u001a\u00a2\u0001\u0000"+
-		"\u0000\u0000\u001c\u001f\u0003\u0002\u0001\u0000\u001d\u001f\u0003\n\u0005"+
-		"\u0000\u001e\u001c\u0001\u0000\u0000\u0000\u001e\u001d\u0001\u0000\u0000"+
-		"\u0000\u001f\"\u0001\u0000\u0000\u0000 \u001e\u0001\u0000\u0000\u0000"+
-		" !\u0001\u0000\u0000\u0000!\u0001\u0001\u0000\u0000\u0000\" \u0001\u0000"+
-		"\u0000\u0000#&\u0003\u0004\u0002\u0000$&\u0003\u0006\u0003\u0000%#\u0001"+
-		"\u0000\u0000\u0000%$\u0001\u0000\u0000\u0000&\'\u0001\u0000\u0000\u0000"+
-		"\'%\u0001\u0000\u0000\u0000\'(\u0001\u0000\u0000\u0000(\u0003\u0001\u0000"+
-		"\u0000\u0000)*\u0005\u0004\u0000\u0000*+\u0005\u0013\u0000\u0000+,\u0005"+
-		"\u0006\u0000\u0000,-\u0007\u0000\u0000\u0000-.\u0005\u0001\u0000\u0000"+
-		".\u0005\u0001\u0000\u0000\u0000/0\u0005\u0004\u0000\u000001\u0005\u0013"+
-		"\u0000\u000013\u0005\u0007\u0000\u000024\u0003\b\u0004\u000032\u0001\u0000"+
-		"\u0000\u000034\u0001\u0000\u0000\u000045\u0001\u0000\u0000\u000056\u0005"+
-		"\b\u0000\u00006:\u0005\t\u0000\u000079\u0003\u0004\u0002\u000087\u0001"+
-		"\u0000\u0000\u00009<\u0001\u0000\u0000\u0000:8\u0001\u0000\u0000\u0000"+
-		":;\u0001\u0000\u0000\u0000;@\u0001\u0000\u0000\u0000<:\u0001\u0000\u0000"+
-		"\u0000=?\u0003\n\u0005\u0000>=\u0001\u0000\u0000\u0000?B\u0001\u0000\u0000"+
-		"\u0000@>\u0001\u0000\u0000\u0000@A\u0001\u0000\u0000\u0000AC\u0001\u0000"+
-		"\u0000\u0000B@\u0001\u0000\u0000\u0000CD\u0005\n\u0000\u0000D\u0007\u0001"+
-		"\u0000\u0000\u0000EF\u0005\u0004\u0000\u0000FL\u0005\u0013\u0000\u0000"+
-		"GH\u0005\u0002\u0000\u0000HI\u0005\u0004\u0000\u0000IK\u0005\u0013\u0000"+
-		"\u0000JG\u0001\u0000\u0000\u0000KN\u0001\u0000\u0000\u0000LJ\u0001\u0000"+
-		"\u0000\u0000LM\u0001\u0000\u0000\u0000M\t\u0001\u0000\u0000\u0000NL\u0001"+
-		"\u0000\u0000\u0000OV\u0003\u0018\f\u0000PV\u0003\f\u0006\u0000QV\u0003"+
-		"\u0010\b\u0000RV\u0003\u0012\t\u0000SV\u0003\u0014\n\u0000TV\u0003\u0016"+
-		"\u000b\u0000UO\u0001\u0000\u0000\u0000UP\u0001\u0000\u0000\u0000UQ\u0001"+
-		"\u0000\u0000\u0000UR\u0001\u0000\u0000\u0000US\u0001\u0000\u0000\u0000"+
-		"UT\u0001\u0000\u0000\u0000VW\u0001\u0000\u0000\u0000WX\u0005\u0001\u0000"+
-		"\u0000X\u000b\u0001\u0000\u0000\u0000YZ\u0005\u0010\u0000\u0000Z[\u0005"+
-		"\u0007\u0000\u0000[\\\u0003\u0018\f\u0000\\]\u0005\b\u0000\u0000]a\u0005"+
-		"\t\u0000\u0000^`\u0003\n\u0005\u0000_^\u0001\u0000\u0000\u0000`c\u0001"+
-		"\u0000\u0000\u0000a_\u0001\u0000\u0000\u0000ab\u0001\u0000\u0000\u0000"+
-		"bd\u0001\u0000\u0000\u0000ca\u0001\u0000\u0000\u0000df\u0005\n\u0000\u0000"+
-		"eg\u0003\u000e\u0007\u0000fe\u0001\u0000\u0000\u0000fg\u0001\u0000\u0000"+
-		"\u0000g\r\u0001\u0000\u0000\u0000hi\u0005\u0003\u0000\u0000im\u0005\t"+
-		"\u0000\u0000jl\u0003\n\u0005\u0000kj\u0001\u0000\u0000\u0000lo\u0001\u0000"+
-		"\u0000\u0000mk\u0001\u0000\u0000\u0000mn\u0001\u0000\u0000\u0000np\u0001"+
-		"\u0000\u0000\u0000om\u0001\u0000\u0000\u0000pq\u0005\n\u0000\u0000q\u000f"+
-		"\u0001\u0000\u0000\u0000rs\u0005\u0011\u0000\u0000st\u0005\u0007\u0000"+
-		"\u0000tu\u0003\u0018\f\u0000uv\u0005\b\u0000\u0000vz\u0005\t\u0000\u0000"+
-		"wy\u0003\n\u0005\u0000xw\u0001\u0000\u0000\u0000y|\u0001\u0000\u0000\u0000"+
-		"zx\u0001\u0000\u0000\u0000z{\u0001\u0000\u0000\u0000{}\u0001\u0000\u0000"+
-		"\u0000|z\u0001\u0000\u0000\u0000}~\u0005\n\u0000\u0000~\u0011\u0001\u0000"+
-		"\u0000\u0000\u007f\u0080\u0005\u000f\u0000\u0000\u0080\u0081\u0003\u0018"+
-		"\f\u0000\u0081\u0013\u0001\u0000\u0000\u0000\u0082\u0083\u0005\u000e\u0000"+
-		"\u0000\u0083\u0084\u0003\u0018\f\u0000\u0084\u0015\u0001\u0000\u0000\u0000"+
-		"\u0085\u0086\u0005\r\u0000\u0000\u0086\u0087\u0005\u0013\u0000\u0000\u0087"+
-		"\u0017\u0001\u0000\u0000\u0000\u0088\u0089\u0006\f\uffff\uffff\u0000\u0089"+
-		"\u008a\u0005\u0013\u0000\u0000\u008a\u008b\u0005\u0006\u0000\u0000\u008b"+
-		"\u0099\u0003\u0018\f\u0007\u008c\u008d\u0005\u0013\u0000\u0000\u008d\u008f"+
-		"\u0005\u0007\u0000\u0000\u008e\u0090\u0003\u001a\r\u0000\u008f\u008e\u0001"+
-		"\u0000\u0000\u0000\u008f\u0090\u0001\u0000\u0000\u0000\u0090\u0091\u0001"+
-		"\u0000\u0000\u0000\u0091\u0099\u0005\b\u0000\u0000\u0092\u0093\u0005\u0013"+
-		"\u0000\u0000\u0093\u0094\u0005\f\u0000\u0000\u0094\u0099\u0005\u0013\u0000"+
-		"\u0000\u0095\u0099\u0005\u0013\u0000\u0000\u0096\u0099\u0005\u0012\u0000"+
-		"\u0000\u0097\u0099\u0005\u0005\u0000\u0000\u0098\u0088\u0001\u0000\u0000"+
-		"\u0000\u0098\u008c\u0001\u0000\u0000\u0000\u0098\u0092\u0001\u0000\u0000"+
-		"\u0000\u0098\u0095\u0001\u0000\u0000\u0000\u0098\u0096\u0001\u0000\u0000"+
-		"\u0000\u0098\u0097\u0001\u0000\u0000\u0000\u0099\u009f\u0001\u0000\u0000"+
-		"\u0000\u009a\u009b\n\u0005\u0000\u0000\u009b\u009c\u0005\u000b\u0000\u0000"+
-		"\u009c\u009e\u0003\u0018\f\u0006\u009d\u009a\u0001\u0000\u0000\u0000\u009e"+
-		"\u00a1\u0001\u0000\u0000\u0000\u009f\u009d\u0001\u0000\u0000\u0000\u009f"+
-		"\u00a0\u0001\u0000\u0000\u0000\u00a0\u0019\u0001\u0000\u0000\u0000\u00a1"+
-		"\u009f\u0001\u0000\u0000\u0000\u00a2\u00a7\u0003\u0018\f\u0000\u00a3\u00a4"+
-		"\u0005\u0002\u0000\u0000\u00a4\u00a6\u0003\u0018\f\u0000\u00a5\u00a3\u0001"+
-		"\u0000\u0000\u0000\u00a6\u00a9\u0001\u0000\u0000\u0000\u00a7\u00a5\u0001"+
-		"\u0000\u0000\u0000\u00a7\u00a8\u0001\u0000\u0000\u0000\u00a8\u001b\u0001"+
-		"\u0000\u0000\u0000\u00a9\u00a7\u0001\u0000\u0000\u0000\u0011\u001e %\'"+
-		"3:@LUafmz\u008f\u0098\u009f\u00a7";
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\27\u00ad\4\2\t\2"+
+		"\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13"+
+		"\t\13\4\f\t\f\4\r\t\r\4\16\t\16\4\17\t\17\3\2\3\2\7\2!\n\2\f\2\16\2$\13"+
+		"\2\3\3\3\3\6\3(\n\3\r\3\16\3)\3\4\3\4\3\4\3\4\3\4\3\4\3\5\3\5\3\5\3\5"+
+		"\5\5\66\n\5\3\5\3\5\3\5\7\5;\n\5\f\5\16\5>\13\5\3\5\7\5A\n\5\f\5\16\5"+
+		"D\13\5\3\5\3\5\3\6\3\6\3\6\3\6\3\6\7\6M\n\6\f\6\16\6P\13\6\3\7\3\7\3\7"+
+		"\3\7\3\7\3\7\5\7X\n\7\3\7\3\7\3\b\3\b\3\b\3\b\3\b\3\b\7\bb\n\b\f\b\16"+
+		"\be\13\b\3\b\3\b\5\bi\n\b\3\t\3\t\3\t\7\tn\n\t\f\t\16\tq\13\t\3\t\3\t"+
+		"\3\n\3\n\3\n\3\n\3\n\3\n\7\n{\n\n\f\n\16\n~\13\n\3\n\3\n\3\13\3\13\3\13"+
+		"\3\f\3\f\3\f\3\r\3\r\3\r\3\16\3\16\3\16\3\16\3\16\3\16\3\16\5\16\u0092"+
+		"\n\16\3\16\3\16\3\16\3\16\3\16\3\16\3\16\5\16\u009b\n\16\3\16\3\16\3\16"+
+		"\7\16\u00a0\n\16\f\16\16\16\u00a3\13\16\3\17\3\17\3\17\7\17\u00a8\n\17"+
+		"\f\17\16\17\u00ab\13\17\3\17\2\3\32\20\2\4\6\b\n\f\16\20\22\24\26\30\32"+
+		"\34\2\3\4\2\7\7\24\24\2\u00b7\2\"\3\2\2\2\4\'\3\2\2\2\6+\3\2\2\2\b\61"+
+		"\3\2\2\2\nG\3\2\2\2\fW\3\2\2\2\16[\3\2\2\2\20j\3\2\2\2\22t\3\2\2\2\24"+
+		"\u0081\3\2\2\2\26\u0084\3\2\2\2\30\u0087\3\2\2\2\32\u009a\3\2\2\2\34\u00a4"+
+		"\3\2\2\2\36!\5\4\3\2\37!\5\f\7\2 \36\3\2\2\2 \37\3\2\2\2!$\3\2\2\2\" "+
+		"\3\2\2\2\"#\3\2\2\2#\3\3\2\2\2$\"\3\2\2\2%(\5\6\4\2&(\5\b\5\2\'%\3\2\2"+
+		"\2\'&\3\2\2\2()\3\2\2\2)\'\3\2\2\2)*\3\2\2\2*\5\3\2\2\2+,\7\6\2\2,-\7"+
+		"\25\2\2-.\7\b\2\2./\t\2\2\2/\60\7\3\2\2\60\7\3\2\2\2\61\62\7\6\2\2\62"+
+		"\63\7\25\2\2\63\65\7\t\2\2\64\66\5\n\6\2\65\64\3\2\2\2\65\66\3\2\2\2\66"+
+		"\67\3\2\2\2\678\7\n\2\28<\7\13\2\29;\5\6\4\2:9\3\2\2\2;>\3\2\2\2<:\3\2"+
+		"\2\2<=\3\2\2\2=B\3\2\2\2><\3\2\2\2?A\5\f\7\2@?\3\2\2\2AD\3\2\2\2B@\3\2"+
+		"\2\2BC\3\2\2\2CE\3\2\2\2DB\3\2\2\2EF\7\f\2\2F\t\3\2\2\2GH\7\6\2\2HN\7"+
+		"\25\2\2IJ\7\4\2\2JK\7\6\2\2KM\7\25\2\2LI\3\2\2\2MP\3\2\2\2NL\3\2\2\2N"+
+		"O\3\2\2\2O\13\3\2\2\2PN\3\2\2\2QX\5\32\16\2RX\5\16\b\2SX\5\22\n\2TX\5"+
+		"\24\13\2UX\5\26\f\2VX\5\30\r\2WQ\3\2\2\2WR\3\2\2\2WS\3\2\2\2WT\3\2\2\2"+
+		"WU\3\2\2\2WV\3\2\2\2XY\3\2\2\2YZ\7\3\2\2Z\r\3\2\2\2[\\\7\22\2\2\\]\7\t"+
+		"\2\2]^\5\32\16\2^_\7\n\2\2_c\7\13\2\2`b\5\f\7\2a`\3\2\2\2be\3\2\2\2ca"+
+		"\3\2\2\2cd\3\2\2\2df\3\2\2\2ec\3\2\2\2fh\7\f\2\2gi\5\20\t\2hg\3\2\2\2"+
+		"hi\3\2\2\2i\17\3\2\2\2jk\7\5\2\2ko\7\13\2\2ln\5\f\7\2ml\3\2\2\2nq\3\2"+
+		"\2\2om\3\2\2\2op\3\2\2\2pr\3\2\2\2qo\3\2\2\2rs\7\f\2\2s\21\3\2\2\2tu\7"+
+		"\23\2\2uv\7\t\2\2vw\5\32\16\2wx\7\n\2\2x|\7\13\2\2y{\5\f\7\2zy\3\2\2\2"+
+		"{~\3\2\2\2|z\3\2\2\2|}\3\2\2\2}\177\3\2\2\2~|\3\2\2\2\177\u0080\7\f\2"+
+		"\2\u0080\23\3\2\2\2\u0081\u0082\7\21\2\2\u0082\u0083\5\32\16\2\u0083\25"+
+		"\3\2\2\2\u0084\u0085\7\20\2\2\u0085\u0086\5\32\16\2\u0086\27\3\2\2\2\u0087"+
+		"\u0088\7\17\2\2\u0088\u0089\7\25\2\2\u0089\31\3\2\2\2\u008a\u008b\b\16"+
+		"\1\2\u008b\u008c\7\25\2\2\u008c\u008d\7\b\2\2\u008d\u009b\5\32\16\t\u008e"+
+		"\u008f\7\25\2\2\u008f\u0091\7\t\2\2\u0090\u0092\5\34\17\2\u0091\u0090"+
+		"\3\2\2\2\u0091\u0092\3\2\2\2\u0092\u0093\3\2\2\2\u0093\u009b\7\n\2\2\u0094"+
+		"\u0095\7\25\2\2\u0095\u0096\7\16\2\2\u0096\u009b\7\25\2\2\u0097\u009b"+
+		"\7\25\2\2\u0098\u009b\7\24\2\2\u0099\u009b\7\7\2\2\u009a\u008a\3\2\2\2"+
+		"\u009a\u008e\3\2\2\2\u009a\u0094\3\2\2\2\u009a\u0097\3\2\2\2\u009a\u0098"+
+		"\3\2\2\2\u009a\u0099\3\2\2\2\u009b\u00a1\3\2\2\2\u009c\u009d\f\7\2\2\u009d"+
+		"\u009e\7\r\2\2\u009e\u00a0\5\32\16\b\u009f\u009c\3\2\2\2\u00a0\u00a3\3"+
+		"\2\2\2\u00a1\u009f\3\2\2\2\u00a1\u00a2\3\2\2\2\u00a2\33\3\2\2\2\u00a3"+
+		"\u00a1\3\2\2\2\u00a4\u00a9\5\32\16\2\u00a5\u00a6\7\4\2\2\u00a6\u00a8\5"+
+		"\32\16\2\u00a7\u00a5\3\2\2\2\u00a8\u00ab\3\2\2\2\u00a9\u00a7\3\2\2\2\u00a9"+
+		"\u00aa\3\2\2\2\u00aa\35\3\2\2\2\u00ab\u00a9\3\2\2\2\23 \"\')\65<BNWch"+
+		"o|\u0091\u009a\u00a1\u00a9";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {
